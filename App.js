@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { FlatList, StatusBar, Text, TextInput, View, Image } from 'react-native';
 
-const myurl = 'https://onlinecardappwebservice-o2ua.onrender.com/allcards';
 let originalData = [];
 
 const App = () => {
     const [mydata, setMydata] = useState([]);
 
     useEffect(() => {
+        const myurl = 'https://onlinecardappwebservice-o2ua.onrender.com/allcards';
         fetch(myurl)
             .then((response) => {
                 return response.json();
